@@ -1,6 +1,6 @@
-RewriteEngine On
-RewriteBase /
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [NC,L]
 
-RewriteCond %{THE_REQUEST} public/([^\s?]*) [NC]
-RewriteRule ^ %1 [L,NE,R=302]
-RewriteRule ^((?!public/).*)$ mini-framework-php/public/$1 [L,NC]
+Options -Indexes
